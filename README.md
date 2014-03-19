@@ -11,7 +11,7 @@ To get setup with the server you must have the follow installed:
 ## Configuration
 
 1. Set your smtp server in settings.json
-2. Set your domain name and default account in start_script.py
+2. Set your domain name and default account in setup_script.py
 
 ## Build & Run
 

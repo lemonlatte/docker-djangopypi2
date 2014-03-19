@@ -16,9 +16,9 @@ RUN /bin/bash -c 'source pypi-site/bin/activate && DJANGOPYPI2_ROOT=/pypi-site/d
 RUN /bin/bash -c 'source pypi-site/bin/activate && DJANGOPYPI2_ROOT=/pypi-site/djangopypi2 manage-pypi-site collectstatic --noinput'
 RUN /bin/bash -c 'source pypi-site/bin/activate && DJANGOPYPI2_ROOT=/pypi-site/djangopypi2 manage-pypi-site loaddata initial'
 
-ADD start_script.py pypi-site/
-RUN /bin/bash -c 'source pypi-site/bin/activate && python pypi-site/start_script.py'
-RUN rm pypi-site/start_script.py
+ADD setup_script.py pypi-site/
+RUN /bin/bash -c 'source pypi-site/bin/activate && python pypi-site/setup_script.py'
+RUN rm pypi-site/setup_script.py
 
 RUN echo 'daemon off;' >> /etc/nginx/nginx.conf
 RUN rm /etc/nginx/sites-enabled/default
