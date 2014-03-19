@@ -29,6 +29,8 @@ ADD settings.json pypi-site/djangopypi2/
 ADD pypi-site /etc/nginx/sites-enabled/
 ADD supervisor.conf/ /etc/supervisor/conf.d/
 RUN chown www-data:www-data -R pypi-site/djangopypi2
+VOLUME /var/data
 
 EXPOSE 80
-CMD ["supervisord", "-n"]
+ADD run_server.sh run_server.sh
+CMD ["sh", "run_server.sh"]
