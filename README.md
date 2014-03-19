@@ -19,7 +19,6 @@ Add a share folder for keep sqlite db and packages.
 
 ``` shell
 $ mkdir -p /var/docker/djangopypi2
-$ mkdir /var/docker/djangopypi2/media
 ```
 
 Build docker images
